@@ -1,0 +1,21 @@
+# LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.xdv
+
+# Python caches
+__pycache__/
+*.py[cod]
+
+# Local audit/build directories and temporary packages
+audit_build/
+length_three_revision_package.zip
+main_revised_shaded.pdf
+

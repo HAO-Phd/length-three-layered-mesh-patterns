@@ -1,0 +1,394 @@
+{
+  "description": "Explicit signature witnesses and orientations for all 43 layer-coordinate edges in Table 2.",
+  "identity_convention": "For each record and every positive composition L, the source statistic at L equals the target statistic at U_i(L).",
+  "witness_count": 43,
+  "witnesses": [
+    {
+      "distribution_class": 3,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_1",
+      "source_signature": "r=(1,1,1);z=(0,0,0);E={0,1}",
+      "target_signature": "r=(1,1,1);z=(0,0,0);E={0,3}",
+      "identity": "P_source(L) = P_target(U_1(L))"
+    },
+    {
+      "distribution_class": 11,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_1",
+      "source_signature": "r=(1,1,1);z=(0,0,1);E={0,1}",
+      "target_signature": "r=(1,1,1);z=(0,1,0);E={0,3}",
+      "identity": "P_source(L) = P_target(U_1(L))"
+    },
+    {
+      "distribution_class": 20,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_1",
+      "source_signature": "r=(1,1,1);z=(0,0,2);E={0,1}",
+      "target_signature": "r=(1,1,1);z=(0,2,0);E={0,3}",
+      "identity": "P_source(L) = P_target(U_1(L))"
+    },
+    {
+      "distribution_class": 12,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_2",
+      "source_signature": "r=(1,1,1);z=(0,0,1);E={0,2}",
+      "target_signature": "r=(1,1,1);z=(0,0,1);E={2,3}",
+      "identity": "P_source(L) = P_target(U_2(L))"
+    },
+    {
+      "distribution_class": 12,
+      "source_local_orbit": 1,
+      "target_local_orbit": 3,
+      "coordinate_map": "U_3",
+      "source_signature": "r=(1,1,1);z=(0,0,1);E={0,2}",
+      "target_signature": "r=(1,1,1);z=(0,1,0);E={0,1}",
+      "identity": "P_source(L) = P_target(U_3(L))"
+    },
+    {
+      "distribution_class": 12,
+      "source_local_orbit": 2,
+      "target_local_orbit": 3,
+      "coordinate_map": "U_4",
+      "source_signature": "r=(1,1,1);z=(0,0,1);E={2,3}",
+      "target_signature": "r=(1,1,1);z=(0,1,0);E={0,1}",
+      "identity": "P_source(L) = P_target(U_4(L))"
+    },
+    {
+      "distribution_class": 22,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_2",
+      "source_signature": "r=(1,1,1);z=(0,0,2);E={0,3}",
+      "target_signature": "r=(1,1,1);z=(0,0,2);E={2,3}",
+      "identity": "P_source(L) = P_target(U_2(L))"
+    },
+    {
+      "distribution_class": 22,
+      "source_local_orbit": 1,
+      "target_local_orbit": 3,
+      "coordinate_map": "U_3",
+      "source_signature": "r=(1,1,1);z=(0,0,2);E={0,3}",
+      "target_signature": "r=(1,1,1);z=(0,2,0);E={0,1}",
+      "identity": "P_source(L) = P_target(U_3(L))"
+    },
+    {
+      "distribution_class": 22,
+      "source_local_orbit": 2,
+      "target_local_orbit": 3,
+      "coordinate_map": "U_4",
+      "source_signature": "r=(1,1,1);z=(0,0,2);E={2,3}",
+      "target_signature": "r=(1,1,1);z=(0,2,0);E={0,1}",
+      "identity": "P_source(L) = P_target(U_4(L))"
+    },
+    {
+      "distribution_class": 43,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_2",
+      "source_signature": "r=(1,1,1);z=(0,1,2);E={0,3}",
+      "target_signature": "r=(1,1,1);z=(1,0,2);E={2,3}",
+      "identity": "P_source(L) = P_target(U_2(L))"
+    },
+    {
+      "distribution_class": 43,
+      "source_local_orbit": 1,
+      "target_local_orbit": 3,
+      "coordinate_map": "U_3",
+      "source_signature": "r=(1,1,1);z=(0,1,2);E={0,3}",
+      "target_signature": "r=(1,1,1);z=(0,2,1);E={0,1}",
+      "identity": "P_source(L) = P_target(U_3(L))"
+    },
+    {
+      "distribution_class": 43,
+      "source_local_orbit": 2,
+      "target_local_orbit": 3,
+      "coordinate_map": "U_4",
+      "source_signature": "r=(1,1,1);z=(1,0,2);E={2,3}",
+      "target_signature": "r=(1,1,1);z=(0,2,1);E={0,1}",
+      "identity": "P_source(L) = P_target(U_4(L))"
+    },
+    {
+      "distribution_class": 13,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_8",
+      "source_signature": "r=(1,1,1);z=(0,0,1);E={0}",
+      "target_signature": "r=(1,1,1);z=(0,1,0);E={0}",
+      "identity": "P_source(L) = P_target(U_8(L))"
+    },
+    {
+      "distribution_class": 21,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_8",
+      "source_signature": "r=(1,1,1);z=(0,0,2);E={0,2}",
+      "target_signature": "r=(1,1,1);z=(0,2,0);E={0,2}",
+      "identity": "P_source(L) = P_target(U_8(L))"
+    },
+    {
+      "distribution_class": 23,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_8",
+      "source_signature": "r=(1,1,1);z=(0,0,2);E={0}",
+      "target_signature": "r=(1,1,1);z=(0,2,0);E={0}",
+      "identity": "P_source(L) = P_target(U_8(L))"
+    },
+    {
+      "distribution_class": 44,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_8",
+      "source_signature": "r=(1,1,1);z=(0,1,2);E={0}",
+      "target_signature": "r=(1,1,1);z=(0,2,1);E={0}",
+      "identity": "P_source(L) = P_target(U_8(L))"
+    },
+    {
+      "distribution_class": 35,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_5",
+      "source_signature": "r=(1,1,1);z=(0,1,1);E={0,1}",
+      "target_signature": "r=(1,1,1);z=(1,0,1);E={0,1}",
+      "identity": "P_source(L) = P_target(U_5(L))"
+    },
+    {
+      "distribution_class": 37,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_6",
+      "source_signature": "r=(1,1,1);z=(0,1,1);E={1,2}",
+      "target_signature": "r=(1,1,1);z=(1,0,1);E={0,2}",
+      "identity": "P_source(L) = P_target(U_6(L))"
+    },
+    {
+      "distribution_class": 38,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_6",
+      "source_signature": "r=(1,1,1);z=(0,1,1);E={1}",
+      "target_signature": "r=(1,1,1);z=(1,0,1);E={0}",
+      "identity": "P_source(L) = P_target(U_6(L))"
+    },
+    {
+      "distribution_class": 65,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_6",
+      "source_signature": "r=(1,1,1);z=(0,2,2);E={2,3}",
+      "target_signature": "r=(1,1,1);z=(2,0,2);E={0,3}",
+      "identity": "P_source(L) = P_target(U_6(L))"
+    },
+    {
+      "distribution_class": 90,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_6",
+      "source_signature": "r=(1,1,1);z=(1,2,2);E={2,3}",
+      "target_signature": "r=(1,1,1);z=(2,1,2);E={0,3}",
+      "identity": "P_source(L) = P_target(U_6(L))"
+    },
+    {
+      "distribution_class": 102,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_6",
+      "source_signature": "r=(1,1,1);z=(2,2,2);E={2,3}",
+      "target_signature": "r=(1,1,1);z=(2,2,2);E={0,3}",
+      "identity": "P_source(L) = P_target(U_6(L))"
+    },
+    {
+      "distribution_class": 42,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_5",
+      "source_signature": "r=(1,1,1);z=(0,1,2);E={0,1}",
+      "target_signature": "r=(1,1,1);z=(1,0,2);E={0,1}",
+      "identity": "P_source(L) = P_target(U_5(L))"
+    },
+    {
+      "distribution_class": 42,
+      "source_local_orbit": 1,
+      "target_local_orbit": 3,
+      "coordinate_map": "U_1",
+      "source_signature": "r=(1,1,1);z=(0,1,2);E={0,1}",
+      "target_signature": "r=(1,1,1);z=(0,2,1);E={0,2}",
+      "identity": "P_source(L) = P_target(U_1(L))"
+    },
+    {
+      "distribution_class": 42,
+      "source_local_orbit": 2,
+      "target_local_orbit": 3,
+      "coordinate_map": "U_7",
+      "source_signature": "r=(1,1,1);z=(1,0,2);E={0,1}",
+      "target_signature": "r=(1,1,1);z=(0,2,1);E={0,2}",
+      "identity": "P_source(L) = P_target(U_7(L))"
+    },
+    {
+      "distribution_class": 46,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_6",
+      "source_signature": "r=(1,1,1);z=(0,1,2);E={1,3}",
+      "target_signature": "r=(1,1,1);z=(1,0,2);E={0,3}",
+      "identity": "P_source(L) = P_target(U_6(L))"
+    },
+    {
+      "distribution_class": 46,
+      "source_local_orbit": 1,
+      "target_local_orbit": 3,
+      "coordinate_map": "U_11",
+      "source_signature": "r=(1,1,1);z=(0,1,2);E={1,3}",
+      "target_signature": "r=(1,1,1);z=(0,2,1);E={2,3}",
+      "identity": "P_source(L) = P_target(U_11(L))"
+    },
+    {
+      "distribution_class": 46,
+      "source_local_orbit": 2,
+      "target_local_orbit": 3,
+      "coordinate_map": "U_7",
+      "source_signature": "r=(1,1,1);z=(1,0,2);E={0,3}",
+      "target_signature": "r=(1,1,1);z=(0,2,1);E={2,3}",
+      "identity": "P_source(L) = P_target(U_7(L))"
+    },
+    {
+      "distribution_class": 48,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_9",
+      "source_signature": "r=(1,1,1);z=(0,1,2);E={3}",
+      "target_signature": "r=(1,1,1);z=(1,0,2);E={3}",
+      "identity": "P_source(L) = P_target(U_9(L))"
+    },
+    {
+      "distribution_class": 63,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_9",
+      "source_signature": "r=(1,1,1);z=(0,2,2);E={1,3}",
+      "target_signature": "r=(1,1,1);z=(2,0,2);E={1,3}",
+      "identity": "P_source(L) = P_target(U_9(L))"
+    },
+    {
+      "distribution_class": 67,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_9",
+      "source_signature": "r=(1,1,1);z=(0,2,2);E={3}",
+      "target_signature": "r=(1,1,1);z=(2,0,2);E={3}",
+      "identity": "P_source(L) = P_target(U_9(L))"
+    },
+    {
+      "distribution_class": 92,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_9",
+      "source_signature": "r=(1,1,1);z=(1,2,2);E={3}",
+      "target_signature": "r=(1,1,1);z=(2,1,2);E={3}",
+      "identity": "P_source(L) = P_target(U_9(L))"
+    },
+    {
+      "distribution_class": 53,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_7",
+      "source_signature": "r=(1,1,1);z=(1,0,2);E={0,2}",
+      "target_signature": "r=(1,1,1);z=(0,2,1);E={1,2}",
+      "identity": "P_source(L) = P_target(U_7(L))"
+    },
+    {
+      "distribution_class": 55,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_7",
+      "source_signature": "r=(1,1,1);z=(1,0,2);E={0}",
+      "target_signature": "r=(1,1,1);z=(0,2,1);E={2}",
+      "identity": "P_source(L) = P_target(U_7(L))"
+    },
+    {
+      "distribution_class": 59,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_3",
+      "source_signature": "r=(1,1,1);z=(0,2,2);E={0,3}",
+      "target_signature": "r=(1,1,1);z=(0,2,2);E={0,1}",
+      "identity": "P_source(L) = P_target(U_3(L))"
+    },
+    {
+      "distribution_class": 59,
+      "source_local_orbit": 1,
+      "target_local_orbit": 3,
+      "coordinate_map": "U_2",
+      "source_signature": "r=(1,1,1);z=(0,2,2);E={0,3}",
+      "target_signature": "r=(1,1,1);z=(2,0,2);E={2,3}",
+      "identity": "P_source(L) = P_target(U_2(L))"
+    },
+    {
+      "distribution_class": 59,
+      "source_local_orbit": 2,
+      "target_local_orbit": 3,
+      "coordinate_map": "U_10",
+      "source_signature": "r=(1,1,1);z=(0,2,2);E={0,1}",
+      "target_signature": "r=(1,1,1);z=(2,0,2);E={2,3}",
+      "identity": "P_source(L) = P_target(U_10(L))"
+    },
+    {
+      "distribution_class": 87,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_3",
+      "source_signature": "r=(1,1,1);z=(1,2,2);E={0,3}",
+      "target_signature": "r=(1,1,1);z=(1,2,2);E={0,1}",
+      "identity": "P_source(L) = P_target(U_3(L))"
+    },
+    {
+      "distribution_class": 87,
+      "source_local_orbit": 1,
+      "target_local_orbit": 3,
+      "coordinate_map": "U_2",
+      "source_signature": "r=(1,1,1);z=(1,2,2);E={0,3}",
+      "target_signature": "r=(1,1,1);z=(2,1,2);E={1,3}",
+      "identity": "P_source(L) = P_target(U_2(L))"
+    },
+    {
+      "distribution_class": 87,
+      "source_local_orbit": 2,
+      "target_local_orbit": 3,
+      "coordinate_map": "U_10",
+      "source_signature": "r=(1,1,1);z=(1,2,2);E={0,1}",
+      "target_signature": "r=(1,1,1);z=(2,1,2);E={1,3}",
+      "identity": "P_source(L) = P_target(U_10(L))"
+    },
+    {
+      "distribution_class": 79,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_1",
+      "source_signature": "r=(1,1,1);z=(1,1,2);E={0,1}",
+      "target_signature": "r=(1,1,1);z=(1,2,1);E={0,2}",
+      "identity": "P_source(L) = P_target(U_1(L))"
+    },
+    {
+      "distribution_class": 81,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_1",
+      "source_signature": "r=(1,1,1);z=(1,1,2);E={0}",
+      "target_signature": "r=(1,1,1);z=(1,2,1);E={2}",
+      "identity": "P_source(L) = P_target(U_1(L))"
+    },
+    {
+      "distribution_class": 80,
+      "source_local_orbit": 1,
+      "target_local_orbit": 2,
+      "coordinate_map": "U_11",
+      "source_signature": "r=(1,1,1);z=(1,1,2);E={0,3}",
+      "target_signature": "r=(1,1,1);z=(1,2,1);E={2,3}",
+      "identity": "P_source(L) = P_target(U_11(L))"
+    }
+  ]
+}
