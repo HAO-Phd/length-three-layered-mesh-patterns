@@ -262,11 +262,7 @@ on layered hosts.  Section~\ref{sec:signature} derives the signature formula,
 enumerative consequences, and the exact pointwise quotient.
 Section~\ref{sec:mechanisms} proves the all-size distributional reductions,
 and Section~\ref{sec:classification} assembles the complete classification.
-The appendix proves the uniform coordinate identities.  The accompanying
-short Supplementary Proof Details record only the finite incidence data
-needed to audit the last two counts: the $43$ coordinate connections, the
-inventory of the eighteen bridges, and the pairwise separation statement.
-All identities valid for arbitrary host size are proved in the main paper.
+The appendix proves the uniform coordinate identities.
 
 \section{Layered hosts and active cells}\label{sec:active}
 
@@ -1155,11 +1151,10 @@ number on binary words of fixed content~\cite{MacMahon} therefore proves the
 result.
 \end{proof}
 
-Together these give $9+1+4+3+1=18$ bridges in the remaining step.
-Supplementary Table~S1 inventories the five families.  Comparing their
-endpoints with the coordinate components shows that every bridge is effective:
-each joins two components that have not previously been joined.  Hence the
-number of components drops from $164$ to $146$.
+Together these give $9+1+4+3+1=18$ bridges in the remaining step.  Comparing
+the endpoints of these five families with the coordinate components shows that
+every bridge is effective: each joins two components that have not previously
+been joined.  Hence the number of components drops from $164$ to $146$.
 
 \section{The complete classification}\label{sec:classification}
 
@@ -1174,28 +1169,28 @@ exactly $147$ distribution classes on $\cL$.
 \begin{proof}
 For the upper bound, Theorems~\ref{thm:active}
 and~\ref{thm:signature} reduce the four occurring underlying permutations
-first to $1{,}600$ effective shadings and then to $644$ signatures.  The exact
-pointwise quotient of Theorem~\ref{thm:pointwise} gives $523$ classes, and
+first to $1{,}600$ effective shadings and then to $644$ signatures.  The finite
+incidence and separation details used below are collected in Supplementary
+Tables~S1--S2 and Proposition~S1.  The exact pointwise quotient of
+Theorem~\ref{thm:pointwise} gives $523$ classes, and
 Proposition~\ref{prop:286} gives $286$ pointwise--$rc$ orbits.  The complete
 unique-support classification replaces $114$ of these orbits by $28$ classes,
 giving $200$.  The coordinate identities have $36$ effective unions and give
-$164$, as recorded in Supplementary Table~S2.  Finally, the eighteen all-size
-bridges of Section~\ref{sec:bridges}, inventoried in Supplementary Table~S1,
-are effective and give $146$.  Every reduction used for this upper bound is
-therefore justified by an identity or equidistribution valid for every host
-size.
+$164$.  Finally, the eighteen all-size bridges of
+Section~\ref{sec:bridges} are effective and give $146$.  Every reduction used
+for this upper bound is therefore justified by an identity or
+equidistribution valid for every host size.
 
 For the lower bound, choose one representative signature from each of these
-$146$ components.  Supplementary Proposition~S1 evaluates the occurrence
-formula of Theorem~\ref{thm:signature} and proves that every two distinct
-representatives have different distribution polynomials at some size
-$n\le7$.  A difference at one size precludes equidistribution, so the
-components cannot merge and there are at least $146$ nonzero distribution
-classes.  Every mesh pattern with layered underlying permutation occurs in
-its underlying permutation itself, since there are no unselected points, so
-none of these classes is the zero class.  Finally, $231$ and $312$ cannot
-occur in a layered host, and all of their shadings give the one zero
-distribution class.
+$146$ components.  Proposition~S1 evaluates the occurrence formula of
+Theorem~\ref{thm:signature} and proves that every two distinct representatives
+have different distribution polynomials at some size $n\le7$.  A difference
+at one size precludes equidistribution, so the components cannot merge and
+there are at least $146$ nonzero distribution classes.  Every mesh pattern
+with layered underlying permutation occurs in its underlying permutation
+itself, since there are no unselected points, so none of these classes is the
+zero class.  Finally, $231$ and $312$ cannot occur in a layered host, and all
+of their shadings give the one zero distribution class.
 \end{proof}
 
 The multiplicity $\nu(\Sigma)$ restores the $1{,}600$ effective shadings, and the
@@ -1340,7 +1335,7 @@ $U_1=(1,3{:}m,2)$ means
 \longmapsto
 (\ell_1,\ell_3,\ldots,\ell_m,\ell_2).
 \]
-Every local orbit joined in Supplementary Table~S2 consists of signatures
+Every local orbit occurring in the $43$ connections consists of signatures
 with three supporting coordinates.  Their statistics vanish
 when $m<3$, and for these two sizes we take every $U_i$ to be the identity.
 The displayed coordinate words apply for $m\ge3$.  Each $U_i$ is uniform in
@@ -1402,20 +1397,19 @@ U_*\mathcal W_m(\Sigma')
 implies the required identity for every choice of the positive variables
 $\ell_1,\ldots,\ell_m$.
 
-For the connections in Supplementary Table~S2, identity
-\textup{(A.1)} is checked symbolically from the displayed coordinate words.
-If no $b_1$ factor is deleted, $U_i$ gives a bijection between the two sets of
-admissible support triples.  If one or two $b_1$ factors are deleted, the
-multiplicity of a reduced word is the number of ways to insert the deleted
-coordinates in the gaps prescribed by $E$.  The conditions defining
-$\Phi_E(m)$ say only that a gap is open or closed, that one of its endpoints
-is fixed, or that two consecutive supports are adjacent.  Substitution of the
-word $U_i$ sends each such interval of insertion positions bijectively to the
-corresponding target interval and preserves its endpoints and multiplicity.
-This is an identity of sets whose endpoints are symbolic functions of $m$;
-no bounded value of $m$ is substituted.  The complete source--target list in
-Supplementary Table~S2 therefore makes the verification finite and
-reproducible.  The numbers of connections using
+For these $43$ connections, identity \textup{(A.1)} is checked symbolically
+from the displayed coordinate words.  If no $b_1$ factor is deleted, $U_i$
+gives a bijection between the two sets of admissible support triples.  If one
+or two $b_1$ factors are deleted, the multiplicity of a reduced word is the
+number of ways to insert the deleted coordinates in the gaps prescribed by
+$E$.  The conditions defining $\Phi_E(m)$ say only that a gap is open or
+closed, that one of its endpoints is fixed, or that two consecutive supports
+are adjacent.  Substitution of the word $U_i$ sends each such interval of
+insertion positions bijectively to the corresponding target interval and
+preserves its endpoints and multiplicity.  This is an identity of sets whose
+endpoints are symbolic functions of $m$; no bounded value of $m$ is
+substituted.  The complete source--target list therefore makes the
+verification finite and reproducible.  The numbers of connections using
 $U_1,\ldots,U_{11}$ are, respectively,
 $6,5,5,3,2,6,4,4,4,2,2$, which sum to $43$.
 
@@ -1437,19 +1431,17 @@ P_{(111;112;\{0\})}(L)
 =
 P_{(111;121;\{2\})}(U_1(L)).
 \]
-For each of the remaining rows of Supplementary Table~S2, direct substitution
-of the indicated $U_i$ gives the same support-insertion calculation, with a
-cyclic shift, an endpoint swap, or a reversal of the relevant interval.  Since
-these operations are bijections of the full symbolic interval, this proves
-\textup{(A.1)} uniformly in $m$.  When $m<3$, both statistics vanish, as
-noted above.
+For each of the remaining connections, direct substitution of the indicated
+$U_i$ gives the same support-insertion calculation, with a cyclic shift, an
+endpoint swap, or a reversal of the relevant interval.  Since these operations
+are bijections of the full symbolic interval, this proves \textup{(A.1)}
+uniformly in $m$.  When $m<3$, both statistics vanish, as noted above.
 \end{proof}
 
-Supplementary Table~S2 also records the final-class and local-orbit labels
-of every oriented identity.  Its $43$ edges give $36$ effective unions,
-reducing the $88$ relevant local orbits to $52$ components.  With the $28$
-unique-support classes and $84$ unaffected singleton multiple-support orbits,
-this gives $28+84+52=164$.
+The $43$ edges give $36$ effective unions, reducing the $88$ relevant local
+orbits to $52$ components.  With the $28$ unique-support classes and $84$
+unaffected singleton multiple-support orbits, this gives
+$28+84+52=164$.
 
 \end{document}
 
