@@ -1,0 +1,158 @@
+\documentclass[10pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array,booktabs,longtable}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage[a4paper,margin=2cm]{geometry}
+
+\setlength{\parindent}{14pt}
+\setlength{\parskip}{2pt}
+\setlength{\LTpre}{3pt}
+\setlength{\LTpost}{3pt}
+\allowdisplaybreaks
+
+\newtheorem{proposition}{Proposition}
+\renewcommand{\theproposition}{S\arabic{proposition}}
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries Supplementary Proof Details}\\[4pt]
+{\large for \emph{The complete equidistribution classification of\\
+length-three mesh patterns on layered permutations}}\\[7pt]
+Jiahao Zhang
+\end{center}
+
+\noindent
+This note records the two finite ingredients used at the end of the
+classification: the incidence data for the coordinate identifications and
+the exact separation of the resulting components.  All identities valid for
+arbitrary host size, including the signature formula, the pointwise
+criterion, the kernel-degree theorem, the coordinate lemma, and the eighteen
+distributional bridges, are proved in the main paper.
+
+\section{The last two finite quotients}
+
+After pointwise equality, reverse-complement, and the complete
+kernel-degree reduction, the main paper obtains $200$ classes.  Of these,
+$28$ are the unique-support classes.  Among the remaining $172$ classes,
+$84$ are isolated under coordinate relabelling, while the other $88$ are
+joined by the $43$ edges of Table~\ref{tab:coordinate-witnesses}.  Seven
+edges close triangles already connected by two earlier edges, so the rank
+drop is $36$ and
+\[
+28+84+(88-36)=164.
+\]
+
+The five all-size bridge families proved in the main paper give the inventory
+in Table~\ref{tab:bridge-inventory}.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{The eighteen effective bridges from $164$ to $146$ components.}
+\label{tab:bridge-inventory}
+\begin{tabular}{@{}l c r@{}}
+\toprule
+mechanism & parameter range & effective joins\\
+\midrule
+uniform cut shift & $(a,b)\in\{0,1,2\}^2$ & $9$\\
+exceptional rational identity & Class $79$ & $1$\\
+non-overlapping contraction & $z\in\{0,1,2,3\}$ & $4$\\
+separator complementation & $a\in\{0,1,2\}$ & $3$\\
+MacMahon bridge & major index--inversion & $1$\\
+\midrule
+total && $18$\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+For every listed bridge, its two endpoints lie in distinct coordinate
+components, and no bridge becomes redundant after the preceding bridges are
+added.  Thus all eighteen joins are effective and the resulting graph has
+$164-18=146$ components.  This is the upper-bound partition used in the
+complete-classification theorem.
+
+\section{The 43 coordinate edges}
+
+We use the notation $(r;z;E)$ from the main paper, omitting commas inside the
+block word, internal-channel word, and external-set word.  Thus
+$(111;012;03)$ denotes $r=(1,1,1)$, $z=(0,1,2)$, and $E=\{0,3\}$.
+
+Every row of Table~\ref{tab:coordinate-witnesses} is oriented.  The appendix
+of the main paper proves, symbolically for arbitrary layer number $m$ and
+arbitrary positive layer sizes, the identity
+\[
+P_{\Sigma}(L)=P_{\Sigma'}(U_i(L))
+\]
+displayed by that row.  Thus the table records finite incidence data for
+all-size mathematical identities; it is not a list of bounded numerical
+tests.
+
+{\footnotesize
+\setlength{\tabcolsep}{4pt}
+\input{coordinate_connections_detailed.tex}
+}
+
+\section{Finite separation of the 146 components}
+
+\begin{proposition}[Pairwise separation]\label{prop:finite-separation}
+Choose one signature from each of the $146$ components obtained in
+Sections~S1--S2.  Representatives can be chosen so that every two distinct
+representatives have different distribution polynomials at some host size
+$n\le7$.  Among the $\binom{146}{2}=10{,}585$ unordered pairs, the numbers
+whose first separating sizes are $4,5,6,7$ are, respectively,
+\[
+10{,}260,\qquad302,\qquad21,\qquad2.
+\]
+Consequently the $146$ components are pairwise distribution-inequivalent.
+\end{proposition}
+
+\begin{proof}
+\enlargethispage{2\baselineskip}
+For a signature $\Sigma$, substitute the occurrence formula from the main
+paper into
+\[
+D_{\Sigma,n}(q)
+=\sum_{m=1}^{n}\ \sum_{\substack{\ell_1+\cdots+\ell_m=n\\
+\ell_i\ge1}}q^{P_\Sigma(\ell_1,\ldots,\ell_m)}.
+\]
+For $n\le7$ this is a finite sum of monomials with integer coefficients.
+Exact coefficient comparison gives the four numbers in the statement.
+The two pairs that require $n=7$ are displayed below; all other pairs
+separate by $n\le6$.
+
+Put
+\[
+\Sigma_A=(111;000;\{0,2\}),\quad
+\Sigma_B=(111;000;\{1,2\}).
+\]
+Then
+\[
+\begin{aligned}
+D_{\Sigma_A,7}(q)
+ &=7+13q^5+5q^6+4q^7+18q^8+8q^9+2q^{10}+7q^{12},\\
+D_{\Sigma_B,7}(q)
+ &=7+13q^5+4q^6+6q^7+17q^8+8q^9+2q^{10}+7q^{12}.
+\end{aligned}
+\]
+For
+\[
+\Sigma_C=(111;222;\{0,2\}),\quad
+\Sigma_D=(111;222;\{1,2\}),
+\]
+one has
+\[
+\begin{aligned}
+D_{\Sigma_C,7}(q)&=49+7q+5q^2+2q^3+q^5,\\
+D_{\Sigma_D,7}(q)&=48+9q+4q^2+2q^3+q^5.
+\end{aligned}
+\]
+A difference at a single size rules out equidistribution.  Therefore no two
+of the $146$ components can merge.
+\end{proof}
+
+\end{document}
