@@ -71,25 +71,26 @@ Tianjin 300387, P. R. China
 \end{center}
 
 \noindent\textbf{Abstract.}
-The distributional classification of short mesh patterns has developed through
-a sequence of results for selected pattern families and host classes.  A recent
-complete classification at length two on layered permutations gives $35$
-distribution classes, whereas a length-three mesh pattern may be chosen in
-$6\cdot2^{16}=393{,}216$ ways and complete distributional results have
-previously been out of reach.  We show that a full classification is possible
-on layered permutations.  For mesh patterns with layered underlying
-permutation, we introduce a layer-constraint signature and prove occurrence
-and signature-enumeration formulas valid at arbitrary length; at length three
-these tools yield exactly $147$ distribution-equivalence classes, including
-the zero class.  All equidistribution identities used in the classification
-are proved uniformly for arbitrary host size.  To the best
-of our knowledge, this is the first complete distributional classification of
-length-three mesh patterns on any nontrivial host class.
+Distributional results for short mesh patterns have largely concerned selected
+pattern families and host classes.  On layered permutations, length-two mesh
+patterns form $35$ distribution classes, whereas at length three there are
+$6\cdot2^{16}=393{,}216$ mesh patterns.  Here we classify all length-three
+mesh patterns on the same host class.  For patterns whose underlying
+permutation is
+layered, we introduce a layer-constraint signature and derive occurrence and
+signature-enumeration formulas valid at arbitrary length.  At length three,
+the signature reduction, pointwise identities, composition bijections, and
+two nonlocal identities yield exactly $146$ nonzero distribution classes.
+The two non-layered underlying permutations contribute a single zero class,
+giving $147$ classes in total.  Each equidistribution used for the upper bound
+is proved for hosts of every size, and pairwise separation of the $146$
+representatives gives the matching lower bound.
 
 \par\smallskip\noindent\textbf{Keywords:} mesh pattern, layered permutation,
 equidistribution, composition, classification.
 
-\par\smallskip\noindent\textbf{AMS Subject Classifications:} 05A05, 05A15.
+\par\smallskip\noindent\textbf{2020 Mathematics Subject Classification:}
+05A05, 05A15.
 
 \section{Introduction}
 
@@ -187,29 +188,18 @@ distribution classes.  To the best of our knowledge, the present paper is the
 first to show that the full distributional classification of length-three mesh
 patterns can also be completed on a specified nontrivial host class.
 
-Our main tool is a layer-constraint signature that we introduce.  The
-active-cell theorem and
-the signature formula are valid for mesh patterns of arbitrary length whose
-underlying permutation is layered.  They yield a uniform rational generating
-function for total occurrences and an explicit enumeration of signatures at
-every length.  At length three, they reduce the $393{,}216$ raw diagrams first
-to $1{,}600$ effective shadings and then to $644$ signatures.  Exact pointwise
-identities produce $523$ pointwise
-classes, reverse-complement gives $286$ pointwise--$rc$ orbits, the
-kernel-degree argument reduces these to $200$, and layer-coordinate
-relabelling gives $164$.  Cut shifts, non-overlapping contractions,
-separator-word complementation, one exceptional rational identity, and a
-major-index--inversion identity complete the remaining identifications.  The
-successive reductions have sizes
-\[
-644\longrightarrow523\longrightarrow286\longrightarrow200
-\longrightarrow164\longrightarrow146.
-\]
-There are $146$ nonzero distribution classes, and the two non-layered
-underlying permutations contribute one additional zero class, for a total of
-$147$.  The upper bound is established by all-size identities, and the lower
-bound by exact separation of the resulting $146$ rows.
-Figure~\ref{fig:classification-flow} summarizes the two levels of the argument.
+The layer-constraint signature is the main organizing device.  The active-cell
+theorem and the signature formula are valid for mesh patterns of arbitrary
+length whose underlying permutation is layered.  They yield a rational
+generating function for total occurrences and an explicit enumeration of
+signatures.  At length three, these tools reduce the $393{,}216$ raw diagrams
+to $1{,}600$ effective shadings and then to $644$ signatures.  Pointwise
+identities, reverse-complement, the unique-support classification,
+layer-coordinate relabellings, and five families of distributional bridges
+then give $146$ nonzero distribution classes.  The two non-layered underlying
+permutations contribute one zero class.  Figure~\ref{fig:classification-flow}
+records the intermediate quotients, and
+Theorem~\ref{thm:146} establishes the matching upper and lower bounds.
 
 \begin{figure}[htbp]
 \centering
@@ -224,7 +214,7 @@ Figure~\ref{fig:classification-flow} summarizes the two levels of the argument.
   arr/.style={-{Stealth[length=1.8mm]},semithick,draw=black!70}
 ]
 \node[font=\small\bfseries,text=black!70] at (0,3.25)
-  {(a) Diagram-level preprocessing};
+  {(a) Diagram-level reduction};
 \node[prebox] (raw) at (-3.3,2.35) {$393{,}216$\\raw patterns};
 \node[prebox] (active) at (0,2.35) {$1{,}600$\\active shadings};
 \node[prebox] (presig) at (3.3,2.35) {$644$\\signatures};
@@ -249,18 +239,18 @@ Figure~\ref{fig:classification-flow} summarizes the two levels of the argument.
   {The underlying patterns $231$ and $312$ contribute the additional zero class.};
 \end{tikzpicture}
 \caption{The two levels of the classification.  Panel (a) records the
-diagram-level preprocessing.  Panel (b) gives the distribution-class
+diagram-level reduction.  Panel (b) gives the distribution-class
 reductions; its arrows represent, from left to right, pointwise equality,
 reverse-complement, kernel-degree reduction, layer-coordinate relabelling, and
 the remaining distributional bridges.}
 \label{fig:classification-flow}
 \end{figure}
 
-The rest of the paper develops this outline without changing levels of
-equivalence implicitly.  Section~\ref{sec:active} identifies the active cells
-on layered hosts.  Section~\ref{sec:signature} derives the signature formula,
-enumerative consequences, and the exact pointwise quotient.
-Section~\ref{sec:mechanisms} proves the all-size distributional reductions,
+Section~\ref{sec:active} identifies the active cells on layered hosts.
+Section~\ref{sec:signature} derives the signature formula, its enumerative
+consequences, and the exact pointwise quotient.
+Section~\ref{sec:mechanisms} proves the distributional reductions
+for hosts of every size,
 and Section~\ref{sec:classification} assembles the complete classification.
 The appendix proves the uniform coordinate identities.
 
@@ -298,7 +288,7 @@ internal channel of block $j$ and the external boundary cells by
 \]
 
 \begin{thm}[Active cells]\label{thm:active}
-For mesh patterns with layered underlying permutation
+For a mesh pattern whose underlying permutation is
 $\delta_{r_1}\oplus\cdots\oplus\delta_{r_s}$, the cells that can contain an
 unselected point relative to an occurrence in a layered host are exactly
 \[
@@ -429,7 +419,7 @@ supports gives the formula.
 \end{proof}
 
 
-For later use, let
+We next record two enumerative consequences of the signature formula.  Let
 \[
 \Lambda(t)
 =
@@ -479,7 +469,7 @@ over the supporting layers and using $\sum_j r_j=k$ gives the stated formula.
 \begin{prop}[Signature enumeration at arbitrary length]
 \label{prop:signature-enumeration}
 Let $S_k$ be the number of layer-constraint signatures arising from
-length-$k$ mesh patterns with layered underlying permutation.  Then
+length-$k$ mesh patterns whose underlying permutations are layered.  Then
 \[
 S_k=
 \sum_{(r_1,\ldots,r_s)\models k}
@@ -563,20 +553,13 @@ there remains only a rational series in $X$, obtained from at most four
 factors chosen from $1$ and $G$ and at most three explicit factors $X$.
 For a fixed word of non-$X$ letters, introduce one variable for each intervening
 run and put every denominator over $(1-X_i)^4$; the resulting polynomial
-numerator is unique.  Thus equality is decided by comparing a finite list of
-integer numerator polynomials.  Performing this coefficientwise reduction on
-the $644$ signatures gives $523$ distinct canonical forms.  Equal forms have
-identical tensors for every $m$, and distinct forms differ as formal series;
-the independence of $\mathcal B^{\otimes m}$ then proves the assertion.  Thus
-the quotient is obtained from exact formal-series comparison, not from
-agreement on a bounded collection of hosts.
+numerator is unique.  Equality is therefore decided by comparing a finite
+list of integer numerator polynomials.  Reducing the $644$ signatures
+coefficientwise in this manner yields $523$ distinct canonical forms.
+Equal forms give identical tensors for every $m$, whereas distinct forms differ
+in at least one tensor coefficient.  The independence of
+$\mathcal B^{\otimes m}$ then proves the stated quotient over all layered hosts.
 \end{proof}
-\begin{remark}\label{rem:pointwise-all-layers}
-The number $523$ results from collecting the $644$ canonical forms described
-in the proof.  Since the criterion is an identity of formal series, this step
-does not infer equality from agreement on hosts with a bounded number of
-layers.
-\end{remark}
 
 \section{From signatures to distributions}\label{sec:mechanisms}
 
@@ -594,7 +577,7 @@ the cells inside each internal channel and therefore preserves their number
 $z_j$, while every external cell lies on the diagonal.  Thus inversion gives
 no additional quotient after signatures have been formed.
 
-The exact pointwise relation is preserved by reverse-complement, so this
+Pointwise equality is preserved by reverse-complement, so this
 involution descends from signatures to the 523 pointwise classes of
 Theorem~\ref{thm:pointwise}.
 
@@ -603,17 +586,16 @@ The $523$ pointwise classes form $286$ pointwise--$rc$ orbits.
 \end{prop}
 
 \begin{proof}
-Exactly 49 pointwise classes are fixed by the induced involution, while the
-remaining 474 form 237 pairs.  Burnside's lemma therefore gives
-$49+474/2=286$.  The fixed-class count is taken directly on the canonical
-formal-series representatives of Theorem~\ref{thm:pointwise}.
+Among the canonical formal-series representatives of
+Theorem~\ref{thm:pointwise}, exactly 49 are fixed by the induced involution.
+The remaining 474 form 237 pairs, so Burnside's lemma gives
+$49+474/2=286$.
 \end{proof}
 
-\subsection{Complete kernel-degree reduction}
+\subsection{Kernel-degree reduction for unique supports}
 
-Let $f(\Sigma)=s+1-|E|$ be the number of free external gaps.  The condition $f\le1$ used below is a
-genuine restriction, not an automatic consequence of working at length three.
-Indeed, the possible values are
+Let $f(\Sigma)=s+1-|E|$ be the number of free external gaps.  The range
+$f\le1$ is special.  At length three the possible values of $f$ are
 \[
 \begin{array}{c|c|c}
 \text{underlying pattern}&s&\text{possible values of }f\\ \hline
@@ -697,7 +679,7 @@ Consequently, in the unique-support range the avoidance generating function
 depends only on $f(\Sigma)$ and $|D(\Sigma)|$.
 \end{coro}
 
-\begin{thm}[Complete unique-support classification]\label{thm:degree-complete}
+\begin{thm}[Unique-support classification]\label{thm:degree-complete}
 Let $\Sigma$ and $\Sigma'$ be length-three signatures with at most one free
 external gap.  Then they are equidistributed on $\cL$ if and only if
 \[
@@ -740,7 +722,7 @@ Consider
 Both signatures have $f=2$ and
 $D=\{\!\{1,1,1\}\!\}$, but their support geometries are different.  On the
 host composition $L=(1,1,2,2)$, the first signature permits the third support
-to be either Layer~3 or Layer~4, whereas the second has admissible supports
+to be either layer~3 or layer~4, whereas the second has admissible supports
 $(1,2,3)$ and $(1,3,4)$.  Therefore
 \[
 \begin{aligned}
@@ -767,13 +749,12 @@ At length three the possible degree multisets are
 \{0,0,0\},\{0,0,1\},\{0,1,1\},\{1,1,1\}.
 \end{gathered}
 \]
-Consequently, the 56 fully constrained signatures form exactly fourteen
+The 56 fully constrained signatures therefore form exactly fourteen
 distribution classes, and the 190 signatures with one free gap form another
 fourteen distribution classes.
-Thus 246 signatures are classified into 28 distribution classes.  In the
+Hence 246 signatures are classified into 28 distribution classes.  In the
 pointwise--$rc$ quotient this replaces 114 pointwise--$rc$ orbits by 28
-distribution classes and improves the bound
-$286$ to
+distribution classes and reduces the current upper bound from $286$ to
 \[
 286-114+28=200.
 \]
@@ -829,8 +810,8 @@ Section~\ref{sec:bridges}.
 For example, put $\Sigma_A=(111;000;\{0,1\})$ and
 $\Sigma_B=(111;000;\{0,3\})$.
 For $\Sigma_A$, the constraints $0,1\in E$ force the first two supporting
-layers to be Layers~1 and~2, while the third support may be any later layer.
-For $\Sigma_B$, the first and third supports are Layers~1 and~$m$, while the
+layers to be layers~1 and~2, while the third support may be any later layer.
+For $\Sigma_B$, the first and third supports are layers~1 and~$m$, while the
 middle support may be any intermediate layer.  Since every local kernel is
 $K_{1,0}(\ell)=\ell$, the two occurrence polynomials are
 \[
@@ -854,29 +835,25 @@ Appendix~\ref{app:coordinate-relabellings}.  There
 Lemma~\ref{lem:coordinate-identities} proves their identities for arbitrary $m$.
 
 After the kernel-degree reduction, 172 multiple-support pointwise--$rc$ orbits
-remain.  Of these, 84 are not incident with a coordinate edge.  The $43$
-coordinate edges on the other 88 orbits have $36$ effective unions and leave
-52 components.  Supplementary Table~S2 gives the source signature, target
-signature, orientation, and coordinate word for every edge.  The resulting
-upper bound is therefore
+remain.  Eighty-four are unchanged by the coordinate identities, while the
+$43$ identities generate $52$ equivalence classes on the other $88$ orbits.
+Supplementary Table~S2 gives the source signature, target signature,
+orientation, and coordinate word for every identity.  The resulting upper
+bound is therefore
 \[
 28+84+52=164.
 \]
 
 \subsection{The remaining distributional bridges}\label{sec:bridges}
-After the kernel-degree reduction and layer-coordinate relabelling, the local
-kernel data and the coordinate-level support symmetries have been exhausted.
-The remaining candidate identifications among the 164 coordinate classes must
-therefore be sought at the level of the host compositions themselves.  In these
-residual cases, the relevant differences arise from the placement of cuts and
-marked adjacent blocks in the composition, rather than from any further
-symmetry of the mesh diagrams.
+At this point the local kernel data and the coordinate symmetries have been
+exhausted.  The remaining identifications act on host compositions themselves:
+they move cuts, contract marked adjacent blocks, complement separator words,
+or invoke a nonlocal distributional identity.
 
-Every layered host is represented by a composition
-$L=(\ell_1,\ldots,\ell_m)$, and the signature formula assigns to each marked
-support a product of local kernel weights.  The remaining distributional
-identities are therefore naturally studied through size-preserving bridges on
-compositions and their marked supports.
+Write a layered host as $L=(\ell_1,\ldots,\ell_m)$.  The signature formula
+expresses the occurrence count as a sum over supports of products of local
+kernel weights.  The remaining identities can therefore be formulated as
+size-preserving maps on compositions and their marked supports.
 
 We encode $L$ by its separator word
 \[
@@ -923,9 +900,10 @@ $B_{\Sigma,n,k}$ and $B_{\Sigma',n,k}$ agree for every $k$, the two
 distribution polynomials are equal for every $n$.
 \end{proof}
 
-The residual identities are organized by three uniform bijective families,
-one exceptional Class~79 distributional identity, and one classical
-Mahonian bridge.
+The bridges fall into five families.  Three are direct bijections on
+compositions---cut shifts, contractions, and separator complementation.  The
+other two use a rational generating function and MacMahon's equidistribution,
+respectively.
 
 \begin{prop}[Uniform cut-shift bijections]
 \label{prop:uniform-cut-shift}
@@ -975,9 +953,7 @@ the same on both sides, the zero-occurrence hosts also occur equally often.
 Thus the two signatures are equidistributed.
 \end{proof}
 
-These give the nine nonexceptional $Q$-bridges.
-
-\begin{prop}[The exceptional Class~79 bridge]
+\begin{prop}[Exceptional rational bridge]
 \label{prop:class79}
 The signatures
 \[
@@ -1038,8 +1014,6 @@ Since $H_0$ is the distribution series for $\Sigma'$, the two signatures are
 equidistributed.
 \end{proof}
 
-This supplies the exceptional $Q$-bridge in Class~79.
-
 \begin{prop}[Unified contraction bridges]\label{prop:unified-contraction}
 For $z\in\{0,1,2,3\}$, put
 \[
@@ -1076,8 +1050,6 @@ for $\Sigma_z$ and $\Sigma'_z$ for every $k$.  The result follows from
 Lemma~\ref{lem:marked-occurrence}.
 \end{proof}
 
-These four bridges account for four of the remaining identifications.
-
 \begin{prop}[Uniform separator-complement bridges]\label{prop:unified-complement}
 For $a\in\{0,1,2\}$, let
 \[
@@ -1110,9 +1082,7 @@ $P_{\Sigma_a}(L)=P_{\Sigma'_a}(\Psi(L))$.  Thus $\Psi$ is a size-preserving
 bijection proving the desired equidistribution.
 \end{proof}
 
-These three bridges account for three of the remaining identifications.
-
-\begin{prop}[Class $118$ MacMahon bridge]\label{prop:macmahon}
+\begin{prop}[MacMahon bridge]\label{prop:macmahon}
 The signatures $\Sigma=(12;02;\varnothing)$ and
 $\Sigma'=(12;11;\varnothing)$ are equidistributed on $\cL$.
 \end{prop}
@@ -1151,16 +1121,16 @@ number on binary words of fixed content~\cite{MacMahon} therefore proves the
 result.
 \end{proof}
 
-Together these give $9+1+4+3+1=18$ bridges in the remaining step.  Comparing
-the endpoints of these five families with the coordinate components shows that
-every bridge is effective: each joins two components that have not previously
-been joined.  Hence the number of components drops from $164$ to $146$.
+The five families contain $9+1+4+3+1=18$ bridges.  Comparing their endpoints
+with the 164 coordinate classes shows that each identifies two previously
+distinct classes.  They therefore reduce the number of classes from $164$ to
+$146$.
 
 \section{The complete classification}\label{sec:classification}
 
 \begin{thm}[Complete length-three classification]\label{thm:146}
-The mesh patterns of length three with layered underlying permutation form
-exactly $146$ nonzero distribution classes on $\cL$.  All mesh patterns with
+The length-three mesh patterns whose underlying permutations are layered form
+exactly $146$ nonzero distribution classes on $\cL$.  All patterns with
 underlying permutation $231$ or $312$ form one additional zero distribution
 class.  Consequently, all $6\cdot2^{16}$ length-three mesh patterns form
 exactly $147$ distribution classes on $\cL$.
@@ -1173,28 +1143,28 @@ first to $1{,}600$ effective shadings and then to $644$ signatures.  The finite
 incidence and separation details used below are collected in Supplementary
 Tables~S1--S2 and Proposition~S1.  The exact pointwise quotient of
 Theorem~\ref{thm:pointwise} gives $523$ classes, and
-Proposition~\ref{prop:286} gives $286$ pointwise--$rc$ orbits.  The complete
+Proposition~\ref{prop:286} gives $286$ pointwise--$rc$ orbits.  The
 unique-support classification replaces $114$ of these orbits by $28$ classes,
-giving $200$.  The coordinate identities have $36$ effective unions and give
-$164$.  Finally, the eighteen all-size bridges of
-Section~\ref{sec:bridges} are effective and give $146$.  Every reduction used
-for this upper bound is therefore justified by an identity or
-equidistribution valid for every host size.
+giving $200$.  The coordinate identities reduce this number to $164$.
+Finally, the eighteen bridges of Section~\ref{sec:bridges} reduce it to $146$.
+All identifications in this upper-bound argument are valid for hosts of every
+size.
 
-For the lower bound, choose one representative signature from each of these
-$146$ components.  Proposition~S1 evaluates the occurrence formula of
+For the lower bound, choose one representative signature from each of the
+$146$ candidate classes.  Proposition~S1 evaluates the occurrence formula of
 Theorem~\ref{thm:signature} and proves that every two distinct representatives
 have different distribution polynomials at some size $n\le7$.  A difference
-at one size precludes equidistribution, so the components cannot merge and
-there are at least $146$ nonzero distribution classes.  Every mesh pattern
-with layered underlying permutation occurs in its underlying permutation
-itself, since there are no unselected points, so none of these classes is the
-zero class.  Finally, $231$ and $312$ cannot occur in a layered host, and all
-of their shadings give the one zero distribution class.
+at one size precludes equidistribution, so the $146$ representatives lie in
+distinct classes.
+There are therefore at least $146$ nonzero distribution classes.  Every mesh
+pattern whose underlying permutation is layered occurs in its underlying
+permutation itself, since there are no unselected points, so none of these
+classes is the zero class.  Finally, $231$ and $312$ cannot occur in a layered
+host, and all of their shadings give the one zero distribution class.
 \end{proof}
 
-The multiplicity $\nu(\Sigma)$ restores the $1{,}600$ effective shadings, and the
-inactive-cell factor restores all raw mesh patterns.
+Finally, weighting each signature by its multiplicity $\nu(\Sigma)$ and
+reinstating the inactive-cell choices accounts for all raw mesh patterns.
 
 \section{Discussion}
 
@@ -1205,19 +1175,18 @@ individual host.  Equidistribution is a further quotient and may arise from a
 nontrivial bijection of compositions even when the pointwise statistics are
 different.
 
-The value of the signature is therefore operational rather than merely
-notational.  It converts the geometry of a mesh diagram into a short weighted
-support polynomial.  That polynomial exposes kernel degrees, coordinate
-symmetries, cut shifts, and separator-word statistics.  In this way the
-classification is obtained from a fixed sequence of reductions rather than
-146 unrelated calculations.
+The signature is more than a change of notation: it converts the geometry of
+a mesh diagram into a short weighted support polynomial.  This polynomial
+reveals kernel degrees, coordinate symmetries, cut shifts, and separator-word
+statistics, organizing the 146 classes through a small set of structural
+reductions.
 
-Length three is also the first place where a genuinely nonlocal word identity
-appears: Class 118 becomes the classical equidistribution of major index and
-inversion number on binary words.  At larger lengths, the same structural
-pipeline remains available; Proposition~\ref{prop:signature-enumeration}
-already gives $S_4=4{,}712$, and additional word statistics and overlapping
-marked blocks may appear.
+Within the length-three classification, the MacMahon bridge is the first
+genuinely nonlocal word identity: it invokes the classical equidistribution
+of major index and inversion number on binary words.  The same framework
+extends to larger lengths; Proposition~\ref{prop:signature-enumeration}
+already gives $S_4=4{,}712$, although additional word statistics and
+overlapping marked blocks may arise.
 
 \section*{Acknowledgments}
 
@@ -1354,7 +1323,7 @@ U_{11}&(1{:}m-2,m,m-1)&&.
 
 \begin{lem}[Uniform coordinate identities]
 \label{lem:coordinate-identities}
-Every one of the $43$ source--target connections listed explicitly in
+Each of the $43$ source--target connections listed explicitly in
 Supplementary Table~S2 satisfies, for every $m$ and every positive host
 composition $L$,
 \[
@@ -1377,7 +1346,7 @@ For $\Sigma=(111;z_1z_2z_3;E)$, form the multiset
 \mathop{\biguplus}_{\phi\in\Phi_E(m)}
 \bigl\{\!\bigl\{(\phi(j),z_j):z_j\ne1\bigr\}\!\bigr\}.
 \]
-It records the labelled supporting coordinates after the factors
+It records the labeled supporting coordinates after the factors
 $b_1=1$ have been deleted, retaining multiplicity when several supports
 produce the same reduced word.  The signature formula becomes
 \[
@@ -1397,25 +1366,21 @@ U_*\mathcal W_m(\Sigma')
 implies the required identity for every choice of the positive variables
 $\ell_1,\ldots,\ell_m$.
 
-For these $43$ connections, identity \textup{(A.1)} is checked symbolically
-from the displayed coordinate words.  If no $b_1$ factor is deleted, $U_i$
-gives a bijection between the two sets of admissible support triples.  If one
-or two $b_1$ factors are deleted, the multiplicity of a reduced word is the
-number of ways to insert the deleted coordinates in the gaps prescribed by
-$E$.  The conditions defining $\Phi_E(m)$ say only that a gap is open or
-closed, that one of its endpoints is fixed, or that two consecutive supports
-are adjacent.  Substitution of the word $U_i$ sends each such interval of
-insertion positions bijectively to the corresponding target interval and
-preserves its endpoints and multiplicity.  This is an identity of sets whose
-endpoints are symbolic functions of $m$; no bounded value of $m$ is
-substituted.  The complete source--target list therefore makes the
-verification finite and reproducible.  The numbers of connections using
+For a listed connection, apply its coordinate word $U_i$ to the admissible
+supports.  If no $b_1$ factor is deleted, this gives a bijection between the
+two sets of support triples.  If one or two $b_1$ factors are deleted, the
+multiplicity of a reduced word is the number of ways to insert the deleted
+coordinates in the gaps prescribed by $E$.  The conditions defining
+$\Phi_E(m)$ specify only open or closed gaps, fixed endpoints, and adjacency
+of consecutive supports.  It therefore suffices to verify that $U_i$ maps the
+corresponding insertion intervals bijectively, preserving their endpoints and
+multiplicities.  The numbers of connections using
 $U_1,\ldots,U_{11}$ are, respectively,
 $6,5,5,3,2,6,4,4,4,2,2$, which sum to $43$.
 
-The example in Section~\ref{sec:coordinate} is the case with no deleted
-factor.  Two examples show explicitly how multiplicities are handled.  For
-$U_1=(1,3{:}m,2)$,
+The example in Section~\ref{sec:coordinate} covers the case with no deleted
+factor.  The following two examples illustrate one and two deleted factors.
+For $U_1=(1,3{:}m,2)$,
 \[
 P_{(111;012;\{0,1\})}(L)
 =
@@ -1431,16 +1396,16 @@ P_{(111;112;\{0\})}(L)
 =
 P_{(111;121;\{2\})}(U_1(L)).
 \]
-For each of the remaining connections, direct substitution of the indicated
-$U_i$ gives the same support-insertion calculation, with a cyclic shift, an
-endpoint swap, or a reversal of the relevant interval.  Since these operations
-are bijections of the full symbolic interval, this proves \textup{(A.1)}
-uniformly in $m$.  When $m<3$, both statistics vanish, as noted above.
+Every other connection differs from one of these calculations by a cyclic
+shift, an endpoint interchange, or a reversal of the relevant interval.
+These operations are bijections of the full symbolic interval, so
+\textup{(A.1)} holds for every $m$.  When $m<3$, both statistics vanish, as
+noted above.
 \end{proof}
 
-The $43$ edges give $36$ effective unions, reducing the $88$ relevant local
-orbits to $52$ components.  With the $28$ unique-support classes and $84$
-unaffected singleton multiple-support orbits, this gives
+These $43$ identities reduce the $88$ relevant local orbits to $52$ classes.
+Together with the $28$ unique-support classes and $84$ unaffected singleton
+multiple-support orbits, this gives
 $28+84+52=164$.
 
 \end{document}
